@@ -101,6 +101,7 @@ export const GuestUserForm: React.FC<AnonymousCustomerFormProps> = ({ onSectionC
         })}
       />
       <Checkbox
+        classNames={{ container: "!mb-0" }}
         value="createAccount"
         label={formatMessage("wantToCreateAccountLabel")}
         checked={createAccountSelected}

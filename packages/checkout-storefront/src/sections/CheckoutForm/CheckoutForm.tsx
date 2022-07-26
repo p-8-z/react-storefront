@@ -72,7 +72,7 @@ export const CheckoutForm = () => {
           <Contact />
         </Suspense>
       </FormProvider>
-      <Divider className="mt-4" />
+      <Divider />
       <Suspense fallback={<AddressesSkeleton />}>
         <Addresses />
       </Suspense>
