@@ -33,9 +33,6 @@ npm-debug.log*
 # build
 dist
 
-#editor
-.vscode
-
 # TypeScript build files
 *.tsbuildinfo
 
