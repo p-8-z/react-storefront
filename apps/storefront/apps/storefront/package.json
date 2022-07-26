@@ -6,8 +6,8 @@
     "node": "^14 || ^16 || ^18"
   },
   "scripts": {
-    "debug": "NODE_OPTIONS='--inspect' next dev --port 3001",
-    "dev": "next dev --port 3001",
+    "debug": "NODE_OPTIONS='--inspect' next dev --port 3000",
+    "dev": "next dev --port 3000",
     "build": "next build",
     "postbuild": "next-sitemap",
     "translations": "formatjs extract './{components,pages}/**/*.{ts,tsx}' --out-file temp.json --flatten --id-interpolation-pattern '[sha512:contenthash:base64:6]' && formatjs compile 'temp.json' --out-file locale/en-US.json && rm ./temp.json",
