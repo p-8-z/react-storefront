@@ -1,10 +1,6 @@
 import { useCheckout } from "@/checkout-storefront/hooks/useCheckout";
-import { Contact, ContactSkeleton } from "@/checkout-storefront/sections/Contact";
-import {
-  DeliveryMethods,
-  DeliveryMethodsSkeleton,
-} from "@/checkout-storefront/sections/DeliveryMethods";
-import { AddressesSkeleton } from "@/checkout-storefront/sections/Addresses";
+import { Contact } from "@/checkout-storefront/sections/Contact";
+import { DeliveryMethods } from "@/checkout-storefront/sections/DeliveryMethods";
 import { useErrorMessages } from "@/checkout-storefront/hooks/useErrorMessages";
 import { useValidationResolver } from "@/checkout-storefront/lib/utils";
 import { Suspense, useState } from "react";
@@ -22,6 +18,9 @@ import { PaymentProviderID } from "checkout-common";
 import { ShippingAddressSection } from "../Addresses/ShippingAddressSection";
 import { CountrySelectProvider } from "@/checkout-storefront/providers/CountrySelectProvider";
 import { CountryCode } from "@/checkout-storefront/graphql";
+import { ContactSkeleton } from "../Skeletons/ContactSkeleton";
+import { AddressesSkeleton } from "../Skeletons/AddressesSkeleton";
+import { DeliveryMethodsSkeleton } from "../Skeletons/DeliveryMethodsSkeleton";
 
 export const CheckoutForm = () => {
   const formatMessage = useFormattedMessages();

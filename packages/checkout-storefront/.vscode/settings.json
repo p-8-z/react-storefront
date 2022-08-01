@@ -1,0 +1,9 @@
+{
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.rollup.cache": true,
+    "**/.next": true,
+    "**/bower_components": true,
+    "**/*.code-search": true
+  }
+}
