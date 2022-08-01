@@ -29,7 +29,7 @@ interface FormData {
 
 export const SignInForm: React.FC<SignInFormProps> = ({ onSectionChange }) => {
   const formatMessage = useFormattedMessages();
-  const { showSuccess, showErrors } = useAlerts();
+  const { showErrors } = useAlerts();
   const { errorMessages } = useErrorMessages();
   const [passwordResetSent, setPasswordResetSent] = useState(false);
   const { login, requestPasswordReset } = useAuth();
@@ -61,8 +61,6 @@ export const SignInForm: React.FC<SignInFormProps> = ({ onSectionChange }) => {
       showErrors(errors, "login");
       return;
     }
-
-    showSuccess("login");
   };
 
   const onPasswordReset = async () => {
