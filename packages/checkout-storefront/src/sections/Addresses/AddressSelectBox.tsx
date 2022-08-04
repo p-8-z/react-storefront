@@ -9,25 +9,20 @@ import { compact } from "lodash-es";
 interface AddressSelectBoxProps extends SelectBoxProps {
   address: Partial<Record<AddressField, any>>;
   onEdit: () => void;
-  onDelete: () => void;
 }
 
-export const AddressSelectBox: React.FC<AddressSelectBoxProps> = ({
-  address,
-  onDelete,
-  onEdit,
-  ...rest
-}) => {
+export const AddressSelectBox: React.FC<AddressSelectBoxProps> = ({ address, onEdit, ...rest }) => {
   const formatMessage = useFormattedMessages();
   const name = `${address.firstName} ${address.lastName}`;
 
-  const { phone, city, countryArea, postalCode, streetAddress1, country } = address;
+  const { phone, city, countryArea, postalCode, streetAddress1, country, id } = address;
 
   return (
     <SelectBox {...rest}>
       <div className="w-full flex flex-row justify-between">
         <div className="flex flex-col pointer-events-none">
-          <Text weight="semibold">{name}</Text>
+          <Text weight="semibold">{id}</Text>
+          <Text>{name}</Text>
           <Text>{phone}</Text>
           <Text>{compact([streetAddress1, city, postalCode]).join(", ")}</Text>
           <Text>{compact([countryArea, country.country]).join(", ")}</Text>
