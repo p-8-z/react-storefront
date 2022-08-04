@@ -17,8 +17,8 @@ import { PaymentSection } from "../PaymentSection";
 import { PaymentProviderID } from "checkout-common";
 import { ShippingAddressSection } from "../Addresses/ShippingAddressSection";
 import { ContactSkeleton } from "@/checkout-storefront/sections/Contact/ContactSkeleton";
-import { AddressesSkeleton } from "@/checkout-storefront/sections/Addresses/AddressSkeleton";
 import { DeliveryMethodsSkeleton } from "@/checkout-storefront/sections/DeliveryMethods/DeliveryMethodsSkeleton";
+import { AddressSectionSkeleton } from "@/checkout-storefront/sections/Addresses/AddressSectionSkeleton";
 
 export const CheckoutForm = () => {
   const formatMessage = useFormattedMessages();
@@ -75,7 +75,7 @@ export const CheckoutForm = () => {
         </FormProvider>
         <>
           {checkout?.isShippingRequired && (
-            <Suspense fallback={<AddressesSkeleton />}>
+            <Suspense fallback={<AddressSectionSkeleton />}>
               <ShippingAddressSection collapsed={showOnlyContact} />
             </Suspense>
           )}
